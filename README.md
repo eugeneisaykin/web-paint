@@ -8,7 +8,7 @@ Clone the repository:
 
 bash
 Copy code
-git clone https://github.com/your_username/paint-app.git
+git clone https://github.com/eugeneisaykin/web-paint
 Go to the project directory:
 
 bash
@@ -24,7 +24,7 @@ Launch the application:
 bash
 Copy code
 npm start
-The application will be available at http://localhost:3000 .
+The application will be available at http://localhost:5173 .
 
 Main functions
 Canvas for drawing: The main place for creativity.
