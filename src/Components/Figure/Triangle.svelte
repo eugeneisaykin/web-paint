@@ -9,6 +9,7 @@
 	/**
 	 * GetContext
 	 */
+	const isRoulette = getContext("isRoulette")
 	const isErasing = getContext("isErasing");
 	const isPencil = getContext("isPencil");
 	const { isFill } = getContext("color");
@@ -34,8 +35,11 @@
 	on:mouseleave={() => (isPopupOpenThickness = false)}
 	class:active={$isTriangle}
 	on:click={() => {
-		$isFigure = !$isFigure; 
-		$isTriangle = !$isTriangle;
+		if(!$isRoulette) {
+			$isFigure = !$isFigure; 
+			$isTriangle = !$isTriangle;
+		}
+		$isRoulette = false;
 	}}
 >
 <span class="line-main"></span>

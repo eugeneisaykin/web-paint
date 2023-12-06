@@ -36,9 +36,11 @@
 	on:mouseleave={() => (isPopupOpenThickness = false)}
 	class:active={$isRectangle}
 	on:click={() => {
-		$isFigure = !$isFigure;
+		if(!$isRoulette) {
+			$isFigure = !$isFigure;
+			$isRectangle = !$isRectangle;
+		}
 		$isRoulette = false;
-		$isRectangle = !$isRectangle;
 	}}
 >
 <span class="line-main"></span>

@@ -9,8 +9,9 @@
 	 * GetContext
 	 */
 	const isErasing = getContext("isErasing");
-	const isPencil = getContext("isPencil")
-	const { isFigure } = getContext("figure")
+	const isPencil = getContext("isPencil");
+	const { isFigure } = getContext("figure");
+	const isRoulette = getContext("isRoulette");
 	
 	/**
 	 * Reactive
@@ -21,7 +22,8 @@
 <button
 	class:active={$isErasing}
 	on:click={() => {
-		$isErasing = !$isErasing;
+		if(!$isRoulette) $isErasing = !$isErasing;
+		$isRoulette = false;
 	}}
 >
 	<FaEraser/>

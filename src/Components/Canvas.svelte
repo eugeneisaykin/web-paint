@@ -130,6 +130,11 @@
     } else if (isDrawing && $isLine || isDrawing && $isRoulette) {
       context.clearRect(0, 0, width, height);
       context.putImageData(imageData, 0, 0);
+      if($isRoulette) {
+        context.strokeStyle = "red"
+      } else {
+        context.strokeStyle = $mainColor;
+      }
       context.beginPath();
       context.moveTo(start.x, start.y);
       context.lineTo(x1, y1);

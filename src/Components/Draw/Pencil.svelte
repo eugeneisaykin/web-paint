@@ -9,6 +9,7 @@
 	/**
 	 * GetContext
 	 */
+	const isRoulette = getContext("isRoulette")
 	const isErasing = getContext("isErasing");
 	const isPencil = getContext("isPencil");
 	const {thickness, isFigure} = getContext("figure");
@@ -27,7 +28,8 @@
 		on:mouseleave={() => (isPopupOpen = false)}
 		class:active={$isPencil}
 		on:click={() => {
-			$isPencil = !$isPencil;
+			if(!$isRoulette) $isPencil = !$isPencil;
+			$isRoulette = false;
 		}}
 	>
 		<FaPencilAlt/>
